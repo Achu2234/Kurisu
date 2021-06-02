@@ -52,9 +52,8 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Eureka! {}, myself {}!* 
-*An Anime themed group management bot from* [Steins;Gate](https://anilist.co/anime/9253)!!
-
+*Hola! {}, myself {}!* 
+*An Anime themed group management bot from* [K-ON](https://k-on.fandom.com/wiki/K-ON!_(Anime))!!
 • *Uptime:* `{}`
 • `{}` *users, across* `{}` *chats.*
 """
@@ -62,19 +61,17 @@ PM_START_TEXT = """
 HELP_STRINGS = """
 *{} comes with:*
 *AI Chatbot*, *Anime*, *Music*, *Notes*, *Filters*, *NSFW* *and more!*
-
 🎛 *All commands can either be used with* `/` *or* `!`.
-🎛 *Reach out for support:* @KurisuSupport [.](https://telegra.ph/file/2291942331f135e3292ee.png)
+🎛 *Reach out for support:*@Yeageristbots [.](https://images5.fanpop.com/image/photos/29600000/Don-t-Say-Lazy-k-on-29601806-500-281.gif)
 """.format(
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-KURISU_IMG = "https://telegra.ph/file/6152bf2f73ca8ea30772a.png"
-KURISUIMGSTART = "https://telegra.ph/file/bd01a439fefb53170b36f.gif"
+KURISU_IMG = "https://telegra.ph/file/a840b1b76035646acdb3b.jpg"
+KURISUIMGSTART = "https://images5.fanpop.com/image/photos/29600000/Don-t-Say-Lazy-k-on-29601806-500-281.gif"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-You can donate to the original writer of the Base code, Paul
-There are two ways of supporting him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
+There are two ways of supporting ME; [Donate There VPS](https://t.me/Yeageristbotsdev)."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -195,7 +192,7 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="➕ Add Kurisu To Your Group",
+                            text="➕ Add Mio Akiyama To Your Group",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
@@ -205,19 +202,19 @@ def start(update: Update, context: CallbackContext):
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                          InlineKeyboardButton(
                              text="🎉 Updates",
-                             url="https://t.me/steinsupdates"),
+                             url="https://t.me/MioAkiyamaupdate"),
                          InlineKeyboardButton(
                              text="🗃 Guide",
-                             url="https://t.me/Steinsupdates/7"),
+                             url="https://t.me/MioAkiyamaupdate/3"),
               
                     ],
                      [
                         InlineKeyboardButton(
-                             text="Anime Chat",
-                             url="https://t.me/ias_chats"),                    
+                             text="Weebs Chat",
+                             url="https://t.me/TheWeebs"),                    
                         InlineKeyboardButton(
                              text="Help & Commands",
-                             url="https://t.me/Kurisu_Makise_Robot?start=help"),      
+                             url="https://t.me/MioAkiyamamange_bot?start=help"),      
                     ]]))
     else:
         update.effective_message.reply_video(
@@ -541,7 +538,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I am now online!](https://telegra.ph/file/26aeb38f38eb8c819e423.mp4)", parse_mode=ParseMode.MARKDOWN)
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I am now online!](https://telegra.ph/file/ea5b00b9307c504be2ad4.mp4)", parse_mode=ParseMode.MARKDOWN)
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!")
